@@ -6,7 +6,7 @@ function cssProp(
   htmlElement: HTMLElement,
   cssProperty: string,
   value: string,
-): void;
+): HTMLElement;
 
 function cssProp(
   htmlElement: HTMLElement,
@@ -27,6 +27,7 @@ function cssProp(
     for (const [key, value] of Object.entries(cssProperty)) {
       htmlElement.style.setProperty(key, value);
     }
+    return htmlElement;
   } else {
     return value
       ? htmlElement.style.setProperty(cssProperty, value)
