@@ -14,7 +14,7 @@ class Dom {
   before(targetElement: HTMLElement, element: HTMLElement) {
     return targetElement.before(element);
   }
-  val(targetElement: HTMLInputElement) {
+  val(targetElement: HTMLElement & { value: string }) {
     return targetElement.value;
   }
 }
